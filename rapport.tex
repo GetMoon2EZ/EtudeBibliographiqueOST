@@ -1,0 +1,209 @@
+\documentclass[a4paper, 12pt]{article}
+
+\input{headers} % A priori, vous n'aurez pas besoin de modifier le contenu de ce fichier :)
+
+\begin{document}
+\pagenumbering{roman} 
+
+%%% Remarque sur la page de garde :
+% Il existe une commande beaucoup plus simple : \maketitle
+% Cette commande ne permet pas directement l'insertion de logo et de données 
+% additionnelles sans modifier certains fichiers de configuration
+% (utilisation avancée)
+
+\begin{titlepage}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+{
+
+%%% Insertion des logos [begin]
+\makelogos
+%%% Insertion des logos [end]
+
+\vspace{4cm}
+
+\begin{center}
+\fbox{ 
+\begin{minipage}[h]{.9\linewidth}
+\begin{center}
+{\vspace*{5mm}
+\huge\textbf{Rapport Ouverture Scientifique et Technique}\\  %%% Titre du rapport
+\vspace*{5mm}}
+\end{center}
+\end{minipage}
+}
+
+\vspace{15mm}
+
+Auteur\\~\\
+{\large 
+\bsc{Dubois} Louan\\
+\bsc{Maachi} Kaoutar\\
+\bsc{Techer} Luc}\\
+~\\
+\underline{STI, 4A}\\ 
+
+\vspace{3cm}  
+
+\textbf{Année Universitaire 2020 - 2021\\
+{\tiny version : \today}}
+
+\vspace{2cm}  
+
+\end{center}
+  
+\vfill
+
+\begin{flushleft}
+	Encadrant : \textsc{Toinard} Christian
+\end{flushleft}
+
+}
+\end{titlepage}
+
+\newpage		
+\tableofcontents % Insertion de la table des matières
+\addcontentsline{toc}{section}{Table des matières}
+
+% Vous pouvez également pour des rapports plus longs (des rapports de stages par exemple) insérer une table des figures
+%\listoffigures
+%\addcontentsline{toc}{section}{Liste des figures} 
+
+% Voir même une liste des algorithmes
+%\listofalgorithms
+%\addcontentsline{toc}{section}{Liste des algorithmes}
+
+\clearpage 
+
+\pagenumbering{arabic} 
+\section{Contexte}
+Un système d'exploitation est principalement composé d'un noyau. Celui-ci est une couche d'abstraction entre le matériel (processeur, mémoire) et le logiciel (application, \emph{user space}), et permet leur communication. Il peut être monolithique, c'est-à-dire un programme qui est tel qu'il est et ne peut pas être modifié, pas d'ajout de fonctionnalités possible sans le recompiler. Il peut également être modulaire, qui signifie que l'on peut lui ajouter des programmes qui étendent ses fonctionnalités, et aussi les supprimer. 
+
+Voici une première section. Vous pouvez faire des citations en utilisant la commande \textbackslash\texttt{cite}. Par exemple \cite{DH76}.
+
+Les informations de publication concernant le papier cité sont à placer dans un fichier \texttt{.bib}. Dans ce template, il s'agit du fichier \texttt{bibliographie.bib}.
+
+Ces informations peuvent être obtenues sur le web, notamment ici : 
+\begin{center}
+\url{https://scholar.google.fr/}
+\end{center}
+
+
+Pour ce faire :
+\begin{enumerate}
+\item chercher le nom de l'article,
+\item cliquez sur les guillemets,
+\item puis sur BibTeX,
+\item copier l'intégralité du texte dans le fichier \texttt{bibliographie.bib},
+\item modifier la clé,
+\item dans votre fichier \texttt{rapport.tex}, utilisez cette clé pour citer le papier.
+\end{enumerate} 
+
+\underline{Exemple :} New directions in Cryptography, de Diffie et Hellman
+
+\begin{enumerate}
+\item La recherche : \url{https://scholar.google.fr/scholar?hl=fr&as_sdt=0%2C5&q=new+directions+in+cryptography&btnG=&oq=New+directions+in+cryptography}
+\item L'entrée BibTeX : \url{https://scholar.googleusercontent.com/scholar.bib?q=info:zhumlNGssTEJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAXJH2ZyWHII7hxbyh6hti-poxCXmdN6Bc&scisf=4&ct=citation&cd=-1&hl=fr&scfhb=1}
+\item Ici, la clé par défaut est \texttt{diffie1976new}, que je modifie en \texttt{DH76}. 
+\item Pour citer ce papier, dans \texttt{rapport.tex}, j'utilise la commande \textbackslash\texttt{cite}\{\texttt{DH76}\}
+\end{enumerate}
+
+
+
+Vous pouvez aussi mettre des références en URL en pied de page\footnote{Il suffit d'utiliser la commande \textbackslash\texttt{footnote} et d'inclure votre URL à l'aide de \textbackslash\texttt{footnote} : \url{https://www.latex-project.org/} ou de \textbackslash\texttt{href} : \href{https://www.latex-project.org/}{même lien}.} (mais c'est moins propre que \textbackslash\texttt{cite}).
+ 
+
+Attention, les compilations \LaTeX et BibTeX peuvent être... ``capricieuses''. Je vous recommande de suivre cet ordre :
+\begin{enumerate}
+\item Compilation \LaTeX{} : \texttt{pdflatex -synctex=1 --shell-escape -interaction=nonstopmode rapport.tex}
+\item Compilation BibTeX : \texttt{bibtex rapport.aux}
+\item Compilation \LaTeX{}
+\item Compilation \LaTeX{}
+\end{enumerate}
+Ou plus simplement, utilisez le \texttt{Makefile} fourni.
+
+\clearpage 
+\section{Problématique}
+
+\subsection{Une première sous-partie}
+\paragraph{}
+Un premier paragraphe...
+\paragraph{}
+Un second...
+
+\subsection{Une seconde sous-partie}
+\paragraph{Inclusion d'images/screenshot} \textcolor{blue}{$\leftarrow$ on peut donner des titres aux paragraphes :)} 
+
+Dans ce paragraphe, on va inclure une petite image (centrée) :
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.5]{images/euler.jpg}
+\caption{\label{euler}Avec une légende :)}
+\end{figure}
+
+Et plus loin on peut même faire (et simplement) référence à la Figure \ref{euler} page \pageref{euler}.
+
+Les formules de maths sont entre \$ comme ceci $\exp^{i\pi} + 1 = 0$ ou encore entre \$\$ pour les centrer : $$\sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.$$
+
+On peut également utiliser un environnement dédié :
+
+\begin{equation}
+\label{eq:zsurpz}
+\mathbb{Z}/p\mathbb{Z} = \left\lbrace 0, 1, \ldots, p-1  \right\rbrace
+\end{equation}
+
+Et même aligner les équations simplement et proprement avec un autre environnement :
+
+\begin{eqnarray}
+t &=& a+b+c\\
+&=& d+e \\
+&=& z^{x\times y}\label{eq:ici}\\
+&=& \left(\frac{\delta + \omega}{\tau}\right)
+\end{eqnarray}
+
+Et faire références à ces équations \eqref{eq:zsurpz} et \eqref{eq:ici}.
+
+\clearpage 
+\section{Apports scientifiques principaux de l’article}
+\subsection{Sous-section encore...}
+\subsection{Et encore...}
+
+
+\clearpage 
+\section{Impacts de l'article}
+
+\clearpage 
+\section{Analyse critique du travail proposé}
+
+\clearpage 
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+
+Ce magnifique projet nous a permis -- outre de nous familiariser avec \LaTeX{} -- de \ldots
+
+\clearpage 
+\bibliographystyle{plain}
+\bibliography{bibliographie}
+\addcontentsline{toc}{section}{Références}
+
+
+\clearpage 
+\appendix
+\bigskip\noindent{\Large\bf Annexes}
+\addcontentsline{toc}{section}{Annexes}
+\section{Algorithme qui fait quelque chose}
+\begin{minted}{c}
+#include<stdio.h>
+
+int main()
+{
+	printf("Hello World !\n);
+	return 0;
+}
+\end{minted}
+
+\clearpage 
+\section{Une autre annexe}
+
+\end{document}

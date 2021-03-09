@@ -1,0 +1,72 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel} 
+\usepackage[top=35mm, bottom=35mm, left=25mm, right=25mm]{geometry}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}  
+\usepackage{subfigure}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{algorithmic, algorithm} 
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{minted}
+\usepackage{framed}
+\usepackage{tcolorbox}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{minted}{\begin{tcolorbox}[left=8mm]\begin{center}}
+\AfterEndEnvironment{minted}{\end{center}\end{tcolorbox}}%
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=black,
+    linkcolor=magenta,
+    urlcolor=blue,
+}
+\hypersetup{
+pdfpagemode={},
+pdfstartview={XYZ 3000 3000 0.75}
+pdfstartview={XYZ left top zoom}
+}
+\hypersetup{
+pdftitle={Template de rapport \LaTeX},
+pdfsubject={Sujet du rapport, peut être vide},
+pdfauthor={Premier auteur et Deuxième auteur},
+pdfkeywords = {Premier mot clé, Deuxième mot clé, etc...}
+}
+\setcounter{secnumdepth}{3}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+ \lhead{\leftmark}
+ \rhead{}
+\usepackage{pgf, tikz}
+\usetikzlibrary{arrows}
+
+
+\newcommand{\makelogos}{
+\begin{tikzpicture}[remember picture,overlay]
+\node [shift={(3 cm,-2cm)}]  at (current page.north west){
+\includegraphics[scale=.25]{images/insacvl.png}
+};
+\node [shift={(-3.675 cm,-2cm)}]  at (current page.north east){
+\begin{minipage}{.01\textwidth}
+\rotatebox{90}{\scalebox{.75}{Département}~~~~}
+\end{minipage}
+};
+\node [shift={(-3 cm,-2cm)}]  at (current page.north east){
+\begin{minipage}{.1\textwidth}
+\hspace{-.5cm}
+\begin{eqnarray}
+&\textbf{{\color{red}S}}&\!\!\!\!\!\textnormal{écurité et}\nonumber\\
+&\textbf{{\color{red}T}}&\!\!\!\!\!\textnormal{echnologies}\nonumber\\
+&\textbf{{\color{red}I}}&\!\!\!\!\!\!\textnormal{nformatiques}\nonumber
+\end{eqnarray}
+\end{minipage}
+};
+\end{tikzpicture}
+}
