@@ -125,6 +125,9 @@ Ou plus simplement, utilisez le \texttt{Makefile} fourni.
 \clearpage 
 \section{Problématique}
 
+Dans les années 1990, tous les systèmes d'exploitation étaient basés sur des noyaux monolithiques ce qui limitait grandement les possibilités de développement de systèmes en rendant compliqué l'intégration de tels noyaux sur des architectures matérielles complexes. Les développeurs avaient alors besoin d'un système d'exploitation fiable, sécurisé et modulable afin de pouvoir l'exploiter au mieux dans leurs applications. \\
+De plus, un noyau monolithique limite la compatibilité et l'optimisation vis-à-vis d'architectures variées. A l'époque, les ordinateurs hautes performances et les super-ordinateurs possaidaient plusieurs processeurs tandis que les ordinateurs grand-public n'en possaidaient qu'un. L'objectif de cette recherche était donc de créer un noyau modulaire qui pouvait être facilement adapté à différentes architectures plus ou moins complexes.
+
 \subsection{Une première sous-partie}
 \paragraph{}
 Un premier paragraphe...
@@ -166,8 +169,13 @@ Et faire références à ces équations \eqref{eq:zsurpz} et \eqref{eq:ici}.
 
 \clearpage 
 \section{Apports scientifiques principaux de l’article}
-\subsection{Sous-section encore...}
-\subsection{Et encore...}
+\subsection{Le concept des micro-noyaux}
+\paragraph{}
+
+Dans cet article, le concept des micro-noyaux est introduit. Il s'agit d'une solution qui consiste à réduire au plus possible le noyau (aussi appelé Nucleus) afin que celui-ci ne puisse effectuer que des tâches élémentaires. Les autres fonctionnalités seront quant à elles effectuées par des serveurs modulaires. Ces serveurs sont en réalité des sous-systèmes qui pourront échanger des informations entre-eux en utilisant des Communications Inter-Processus (IPC). Ces différents sous-systèmes pourront alors être répartis sur un seul ou plusieurs processeurs ou machines. Afin de faciliter les communications entre les différents serveurs, l'article propose aussi la mise en place de Remote Procedure Call (RPC) qui est un protocole qui permet d'exécuter des commandes sur un serveur à distance. \\
+La mise en place de micro-noyaux permettrait de faciliter grandement la répartition et l'isolations de différentes parties du systèmes sur des processeurs ou machines différentes tout en restant compatible avec des architectures plus simples. Ceci permettrait aussi aux développeur de pouvoir créer, tester et implémenter de nouvelles fonctionnalités beaucoup plus simplement.
+
+\subsection{Présentation de Chorus}
 
 
 \clearpage 
