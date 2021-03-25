@@ -148,7 +148,7 @@ Ou plus simplement, utilisez le \texttt{Makefile} fourni.
 \section{Problématique}
 
 Dans les années 1990, tous les systèmes d'exploitation étaient basés sur des noyaux monolithiques ce qui limitait grandement les possibilités de développement de systèmes en rendant compliqué l'intégration de tels noyaux sur des architectures matérielles complexes. Les développeurs avaient alors besoin d'un système d'exploitation fiable, sécurisé et modulable afin de pouvoir l'exploiter au mieux dans leurs applications. \\
-De plus, un noyau monolithique limite la compatibilité et l'optimisation vis-à-vis d'architectures variées. A l'époque, les ordinateurs hautes performances et les super-ordinateurs possaidaient plusieurs processeurs tandis que les ordinateurs grand-public n'en possaidaient qu'un. L'objectif de cette recherche était donc de créer un noyau modulaire qui pouvait être facilement adapté à différentes architectures plus ou moins complexes.
+De plus, un noyau monolithique limite la compatibilité et l'optimisation vis-à-vis d'architectures variées. A l'époque, les ordinateurs hautes performances et les super-ordinateurs possédaient plusieurs processeurs tandis que les ordinateurs grand-public n'en possaidaient qu'un. L'objectif de cette recherche était donc de créer un noyau modulaire qui pouvait être facilement adapté à différentes architectures plus ou moins complexes.
 
 \subsection{Une première sous-partie}
 \paragraph{}
@@ -198,7 +198,23 @@ Dans cet article, le concept des micro-noyaux est introduit. Il s'agit d'une sol
 La mise en place de micro-noyaux permettrait de faciliter grandement la répartition et l'isolations de différentes parties du systèmes sur des processeurs ou machines différentes tout en restant compatible avec des architectures plus simples. Ceci permettrait aussi aux développeur de pouvoir créer, tester et implémenter de nouvelles fonctionnalités beaucoup plus simplement.
 
 \subsection{Présentation de Chorus}
-
+\paragraph{}
+Chorus est un système d'exploitation novateur pour l'époque créé par le laboratoire de recherche INRIA (France) puis développé d'avantage et commercialisé par CHORUS Systems. Il s'agit de l'exemple d'implémentation des micro-noyaux décrite dans l'article. A l'époque, c'était l'une des rare distribution à explorer le domaine des micro-noyaux avec quelques autres exemples notoires tels que Amoeba, Topaz et System-V. Chorus fut une distribution novatrice dont le développement a malheureusement été abandonné depuis. Cependant, Chorus a constitué une base solide pour le développement des micro-noyaux. L'architecture de Chorus est constituée, comme décrit précédemment, d'un micro-noyau qui peut effectuer des fonctionnalités élémentaires et de serveurs qui viennent compléter ce Nucleus.
+\\
+\paragraph{}
+Chorus-v3 était une référence en la matière car il s'agissait de la 4$\sup{ème}$ génération de la distribution. De plus elle faisait usage de contributions de la part de System-V notament dans ce qui est des communications inter-processus et des RPC, de Mach pour ce qui est de la gestion de la mémoire virtuelle partagée et des threads, Amoeba pour la gestion d'addresse et les capacités de binding. Chorus a donc essayé de prendre le meilleur des différentes distributions existantes afin de créé une référence en terme de système d'exploitation utilisant les micro-noyaux.
+\\
+\paragraph{}
+Le Nucleus de Chorus est un noyau temps réel qui implémente le calcul distribué et les communications de bas niveau. Il est lui-même composé de 4 composants différents :
+\begin{itemize}
+	\item Un puissant ordonanceur permettant la gestion des différents processeurs et threads afin de pouvoir exécuter les tâches de manière optimisée et distribuée;
+	\item Un gestionnaire de mémoire distribuée qui supporte toutes les architectures mémoires;
+	\item Un superviseur d'évènement de bas niveau qui permet de distribuer les intéruptions système, trapes et exeptions venant de l'extérieur sur des ports ou routines définis dynamiquement;
+	\item Un gestionnaire de communication inter-processus qui fournit d'excélentes performances de communications entre les différents services.
+\end{itemize}
+\\
+\paragraph{}
+Les sous-systèmes utilisés par Chorus sont en quelques sortes des morceaux de systèmes d'exploitation conventionnels qui agissent par dessus le Nucleus. Ils permettent la gestion de ressources physiques et logiques telles que la gestions des fichiers, des gestionnaires de fichiers, des appareils ainsi que des communication de plus haut niveau. L'architecture est telle qu'un processus ne peut pas voir un sous-système comme un fragment du noyau mais bien comme un système d'exploitation standart. Ceci est dû aux interfaces proposées par les sous-systèmes qui doivent être rigoureusement les mêmes que celles offertes par un système classique. Chaque sous-système possède donc son interface qui interagit avec ses composants et le Nucleus. Cette architecture permet, en plus de faciliter la distribution du système, de grandement simplifier le développement système en faisant abstraction des fonctionnalités de très bas niveau étant donné qu'elles sont déjà implémentées dans le Nucleus.
 
 \clearpage 
 \section{Impacts de l'article}
