@@ -2,6 +2,7 @@
 
 \input{headers} % A priori, vous n'aurez pas besoin de modifier le contenu de ce fichier :)
 
+
 \begin{document}
 \pagenumbering{roman} 
 
@@ -75,9 +76,30 @@ Auteur\\~\\
 
 \clearpage 
 
-\pagenumbering{arabic} 
+\pagenumbering{arabic}
+
 \section{Contexte}
-Un système d'exploitation est principalement composé d'un noyau. Celui-ci est une couche d'abstraction entre le matériel (processeur, mémoire) et le logiciel (application, \emph{user space}), et permet leur communication. Il peut être monolithique, c'est-à-dire un programme qui est tel qu'il est et ne peut pas être modifié, pas d'ajout de fonctionnalités possible sans le recompiler. Il peut également être modulaire, qui signifie que l'on peut lui ajouter des programmes qui étendent ses fonctionnalités, et aussi les supprimer. 
+Les processeurs, dont l’évolution a été caractérisée par une augmentation continue de la fréquence de fonctionnement, suivent depuis quelques années une nouvelle voie, celle du multi-coeur.
+Les limites acceptables étant atteintes, la multiplication des processeurs dans un même système offre une autre possibilité d’augmentation de la puissance de calcul.
+\newline 
+Un système d'exploitation est principalement composé d'un noyau. Celui-ci est une couche d'abstraction entre le matériel (processeur, mémoire) et le logiciel (application, \emph{user space}), et permet leur communication. Il peut être monolithique, c'est-à-dire un programme qui est tel qu'il est et ne peut pas être modifié, pas d'ajout de fonctionnalités possible sans le recompiler. Il peut également être modulaire, qui signifie que l'on peut lui ajouter des programmes qui étendent ses fonctionnalités, et aussi les supprimer.
+\newline
+d'autre part le microkernel est un logiciel ou un code qui contient le minimum requis de fonctions, de données et de fonctionnalités pour implémenter un système d'exploitation. Il fournit un nombre minimal de mécanismes, ce qui est assez bon pour exécuter les fonctions les plus élémentaires d'un système d'exploitation. Il permet à d'autres parties du système d'exploitation d'être implémentées car il n'impose pas beaucoup de politiques.
+\newline
+Un Microkernel est la partie la plus importante pour une implémentation correcte d'un système d'exploitation, on peut voir dans le diagramme ci-dessous, que Microkernel accomplit des opérations de base comme la mémoire, les mécanismes de planification de processus et la communication inter-processus.
+   \begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{image2.PNG}
+\caption{Microkernel Based Operating System}
+\end{figure}
+\newline
+Distributed computing est une technologie beaucoup plus large qui existe depuis plus de trois décennies de maintenant. En termes simples, il est un calcul sur des ordinateurs autonomes distribués qui ne communiquent que sur un réseau, ces systèmes sont généralement traités différemment des systèmes informatiques parallèles ou des systèmes à mémoire partagée, où plusieurs ordinateurs partagent un pool de mémoire commun utilisé pour la communication entre les processeurs. Les systèmes de mémoire distribuée utilisent plusieurs ordinateurs pour résoudre un problème commun, le calcul étant réparti entre les ordinateurs connectés (nœuds) et utilisant la transmission de messages pour communiquer entre les nœuds. Par exemple, le calcul en grille est une forme de calcul distribué où les nœuds peuvent appartenir à différents domaines administratifs. Un autre exemple est la solution de virtualisation du stockage en réseau qui utilise le calcul distribué entre des serveurs de données et de métadonnées.
+   \begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{image3.PNG}
+\caption{A distributed computing system}
+\end{figure}
+\newline
 
 Voici une première section. Vous pouvez faire des citations en utilisant la commande \textbackslash\texttt{cite}. Par exemple \cite{DH76}.
 
