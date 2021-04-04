@@ -156,39 +156,6 @@ Un premier paragraphe...
 \paragraph{}
 Un second...
 
-\subsection{Une seconde sous-partie}
-\paragraph{Inclusion d'images/screenshot} \textcolor{blue}{$\leftarrow$ on peut donner des titres aux paragraphes :)} 
-
-Dans ce paragraphe, on va inclure une petite image (centrée) :
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=.5]{images/euler.jpg}
-\caption{\label{euler}Avec une légende :)}
-\end{figure}
-
-Et plus loin on peut même faire (et simplement) référence à la Figure \ref{euler} page \pageref{euler}.
-
-Les formules de maths sont entre \$ comme ceci $\exp^{i\pi} + 1 = 0$ ou encore entre \$\$ pour les centrer : $$\sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.$$
-
-On peut également utiliser un environnement dédié :
-
-\begin{equation}
-\label{eq:zsurpz}
-\mathbb{Z}/p\mathbb{Z} = \left\lbrace 0, 1, \ldots, p-1  \right\rbrace
-\end{equation}
-
-Et même aligner les équations simplement et proprement avec un autre environnement :
-
-\begin{eqnarray}
-t &=& a+b+c\\
-&=& d+e \\
-&=& z^{x\times y}\label{eq:ici}\\
-&=& \left(\frac{\delta + \omega}{\tau}\right)
-\end{eqnarray}
-
-Et faire références à ces équations \eqref{eq:zsurpz} et \eqref{eq:ici}.
-
 \clearpage 
 \section{Apports scientifiques principaux de l’article}
 \subsection{Le concept des micro-noyaux}
@@ -221,8 +188,16 @@ Les sous-systèmes utilisés par Chorus sont en quelques sortes des morceaux de 
 
 \clearpage 
 \section{Analyse critique du travail proposé}
+\paragraph{}
+L'article proposé fait un état de l'art partiel en ce qui concerne les micro-noyaux. Sa construction semble logique, en introduisant dans un premier temps ce qu'est un micro-noyau puis dans un second temps en présentant un exemple représentatif d'implémentation. Il évoque à plusieurs reprises d'autres travaux tels que Amoeba, Topaz, System-V, MOS ou encore  Mach, ce qui contribue à l'aspect "état de l'art" de l'article. Cependant l'article est principalement orienté vers la description de Chorus spécifiquement. De plus, le point de vue des auteurs semble être biaisé en faveur du système Chorus qui ne rencontre presque aucune critique négative. On peut donc peut-être questionner l'intégrité scientifique des auteurs dans cet article.
+\paragraph{}
+Les enjeux éthiques présentés dans cet article sont majoritairement concentrés sur le souhait de progrès et la facilitation du développement système. En effet, les micro-noyaux offrent une solution à la difficulté croissante du développement système en proposant un système d'API noyau. Cet article présente des avancées majeures dans ce domaine qui sont suffisemment et relativement simplement expliquées afin de pouvoir être assimilées par tout un chacun. L'objectif principal de cet article est donc la vulgarisation de ces avancées. \paragraph{}
+Les micro-noyaux présentent aussi des avantages en matière de sécurité étant donné que les différentes composantes du système sont isolées. La diffusion de ces connaissances permet donc aussi, de manière indirecte, de participer à l'amélioration de la sécurité globale des systèmes.
+\paragraph{}
+Dans sa conclusion, l'article laisse penser que les micro-noyaux deviendraient probablement une partie essentielle des systèmes modernes ce qui est une excellente prédiction étant donné qu'ils sont maintenant utilisés dans plusieurs systèmes d'exploitation grand public.
 
 \clearpage 
+
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
@@ -238,18 +213,6 @@ Ce magnifique projet nous a permis -- outre de nous familiariser avec \LaTeX{} -
 \appendix
 \bigskip\noindent{\Large\bf Annexes}
 \addcontentsline{toc}{section}{Annexes}
-\section{Algorithme qui fait quelque chose}
-\begin{minted}{c}
-#include<stdio.h>
-
-int main()
-{
-	printf("Hello World !\n);
-	return 0;
-}
-\end{minted}
-
-\clearpage 
-\section{Une autre annexe}
+\section{Première Annexe}
 
 \end{document}

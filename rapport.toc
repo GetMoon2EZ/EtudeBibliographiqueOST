@@ -5,20 +5,21 @@
 \contentsline {subsection}{\numberline {2.1}Une première sous-partie}{4}{subsection.2.1}%
 \contentsline {paragraph}{}{4}{section*.2}%
 \contentsline {paragraph}{}{4}{section*.3}%
-\contentsline {subsection}{\numberline {2.2}Une seconde sous-partie}{4}{subsection.2.2}%
-\contentsline {paragraph}{Inclusion d'images/screenshot}{4}{section*.4}%
-\contentsline {section}{\numberline {3}Apports scientifiques principaux de l’article}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Le concept des micro-noyaux}{6}{subsection.3.1}%
-\contentsline {paragraph}{}{6}{section*.5}%
-\contentsline {subsection}{\numberline {3.2}Présentation de Chorus}{6}{subsection.3.2}%
-\contentsline {paragraph}{}{6}{section*.6}%
-\contentsline {paragraph}{}{6}{section*.7}%
+\contentsline {section}{\numberline {3}Apports scientifiques principaux de l’article}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Le concept des micro-noyaux}{5}{subsection.3.1}%
+\contentsline {paragraph}{}{5}{section*.4}%
+\contentsline {subsection}{\numberline {3.2}Présentation de Chorus}{5}{subsection.3.2}%
+\contentsline {paragraph}{}{5}{section*.5}%
+\contentsline {paragraph}{}{5}{section*.6}%
+\contentsline {paragraph}{}{5}{section*.7}%
 \contentsline {paragraph}{}{6}{section*.8}%
-\contentsline {paragraph}{}{7}{section*.9}%
-\contentsline {section}{\numberline {4}Impacts de l'article}{8}{section.4}%
-\contentsline {section}{\numberline {5}Analyse critique du travail proposé}{9}{section.5}%
-\contentsline {section}{Conclusion}{10}{section*.10}%
-\contentsline {section}{Références}{11}{section*.10}%
-\contentsline {section}{Annexes}{11}{section*.10}%
-\contentsline {section}{\numberline {A}Algorithme qui fait quelque chose}{11}{appendix.A}%
-\contentsline {section}{\numberline {B}Une autre annexe}{12}{appendix.B}%
+\contentsline {section}{\numberline {4}Impacts de l'article}{7}{section.4}%
+\contentsline {section}{\numberline {5}Analyse critique du travail proposé}{8}{section.5}%
+\contentsline {paragraph}{}{8}{section*.9}%
+\contentsline {paragraph}{}{8}{section*.10}%
+\contentsline {paragraph}{}{8}{section*.11}%
+\contentsline {paragraph}{}{8}{section*.12}%
+\contentsline {section}{Conclusion}{9}{section*.13}%
+\contentsline {section}{Références}{10}{section*.13}%
+\contentsline {section}{Annexes}{10}{section*.13}%
+\contentsline {section}{\numberline {A}Première Annexe}{10}{appendix.A}%
