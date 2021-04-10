@@ -147,14 +147,50 @@ Ou plus simplement, utilisez le \texttt{Makefile} fourni.
 \clearpage 
 \section{Problématique}
 
-Dans les années 1990, tous les systèmes d'exploitation étaient basés sur des noyaux monolithiques ce qui limitait grandement les possibilités de développement de systèmes en rendant compliqué l'intégration de tels noyaux sur des architectures matérielles complexes. Les développeurs avaient alors besoin d'un système d'exploitation fiable, sécurisé et modulable afin de pouvoir l'exploiter au mieux dans leurs applications. \\
+Dans les années 1990, tous les systèmes d'exploitation étaient basés sur des noyaux monolithiques ce qui limitait grandement les possibilités de développement de systèmes en rendant compliqué l'intégration de tels noyaux sur des architectures matérielles complexes, ils n'ont pas réussi à fournir aux développeurs d'applications une flexibilité suffisante. Ils fournissent une foule d'abstractions inefficaces et souvent inappropriées qui empêchent les applications d'accéder au matériel pour exploiter les gains d'efficacité.\newline
+
+Les développeurs avaient alors besoin d'un système d'exploitation fiable, sécurisé et modulable afin de pouvoir l'exploiter au mieux dans leurs applications. \\
 De plus, un noyau monolithique limite la compatibilité et l'optimisation vis-à-vis d'architectures variées. A l'époque, les ordinateurs hautes performances et les super-ordinateurs possédaient plusieurs processeurs tandis que les ordinateurs grand-public n'en possaidaient qu'un. L'objectif de cette recherche était donc de créer un noyau modulaire qui pouvait être facilement adapté à différentes architectures plus ou moins complexes.
+
 
 \subsection{Une première sous-partie}
 \paragraph{}
 Un premier paragraphe...
 \paragraph{}
 Un second...
+
+\subsection{Une seconde sous-partie}
+\paragraph{Inclusion d'images/screenshot} \textcolor{blue}{$\leftarrow$ on peut donner des titres aux paragraphes :)} 
+
+Dans ce paragraphe, on va inclure une petite image (centrée) :
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.5]{images/euler.jpg}
+\caption{\label{euler}Avec une légende :)}
+\end{figure}
+
+Et plus loin on peut même faire (et simplement) référence à la Figure \ref{euler} page \pageref{euler}.
+
+Les formules de maths sont entre \$ comme ceci $\exp^{i\pi} + 1 = 0$ ou encore entre \$\$ pour les centrer : $$\sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.$$
+
+On peut également utiliser un environnement dédié :
+
+\begin{equation}
+\label{eq:zsurpz}
+\mathbb{Z}/p\mathbb{Z} = \left\lbrace 0, 1, \ldots, p-1  \right\rbrace
+\end{equation}
+
+Et même aligner les équations simplement et proprement avec un autre environnement :
+
+\begin{eqnarray}
+t &=& a+b+c\\
+&=& d+e \\
+&=& z^{x\times y}\label{eq:ici}\\
+&=& \left(\frac{\delta + \omega}{\tau}\right)
+\end{eqnarray}
+
+Et faire références à ces équations \eqref{eq:zsurpz} et \eqref{eq:ici}.
 
 \clearpage 
 \section{Apports scientifiques principaux de l’article}
@@ -179,14 +215,22 @@ Le Nucleus de Chorus est un noyau temps réel qui implémente le calcul distribu
 	\item Un superviseur d'évènement de bas niveau qui permet de distribuer les intéruptions système, trapes et exeptions venant de l'extérieur sur des ports ou routines définis dynamiquement;
 	\item Un gestionnaire de communication inter-processus qui fournit d'excélentes performances de communications entre les différents services.
 \end{itemize}
-\\
+
 \paragraph{}
 Les sous-systèmes utilisés par Chorus sont en quelques sortes des morceaux de systèmes d'exploitation conventionnels qui agissent par dessus le Nucleus. Ils permettent la gestion de ressources physiques et logiques telles que la gestions des fichiers, des gestionnaires de fichiers, des appareils ainsi que des communication de plus haut niveau. L'architecture est telle qu'un processus ne peut pas voir un sous-système comme un fragment du noyau mais bien comme un système d'exploitation standart. Ceci est dû aux interfaces proposées par les sous-systèmes qui doivent être rigoureusement les mêmes que celles offertes par un système classique. Chaque sous-système possède donc son interface qui interagit avec ses composants et le Nucleus. Cette architecture permet, en plus de faciliter la distribution du système, de grandement simplifier le développement système en faisant abstraction des fonctionnalités de très bas niveau étant donné qu'elles sont déjà implémentées dans le Nucleus.
 
 \clearpage 
 \section{Impacts de l'article}
+\paragraph{}
+L’article de recherche est un  ancien article qui est publié en janvier 1991 et Il possède 13 citation sur Google scholar en mars
+2021.
+\newline 
+Ce qu'il faut savoir a propos de ses auteurs c'est que "Michel Gien" c'est un co-founder & CTO of Chorus Systems , il a dirigé la direction technique du système d'exploitation Chorus, pionnier dans la conception de systèmes d'exploitation basés sur des micro-noyaux et distribué UNIX par "image système unique" sur des architectures multi-ordinateurs ainsi que l'évolution de Chorus vers un système d'exploitation distribué évolutif en temps réel, il a évangélisé l'approche du système d'exploitation Chorus auprès de la communauté scientifique et des marchés commerciaux. il a continué à publier d'autres articles dans le même contexte de notre article par exemple on peut citer \cite{n1}.Ainsi, tout porte à croire que l'article a ouvert la voie à de nombreuses réflexions indépendantes sur le sujet . 
+\paragraph{}
+Notre article est très souvent cité comme outil majeur pour faire référence au micrkernel "CHORUS", parmi les articles qu'ils le cite on trouve par exemple \cite{n2} l'article qui parle de la comparaison des 3 microkernels au niveau de la gestion des processus, de la gestion de la mémoire et de la communication et cet article a été cité 23 fois d'où son impact qui est non negligeable.
 
-\clearpage 
+
+ 
 \section{Analyse critique du travail proposé}
 \paragraph{}
 L'article proposé fait un état de l'art partiel en ce qui concerne les micro-noyaux. Sa construction semble logique, en introduisant dans un premier temps ce qu'est un micro-noyau puis dans un second temps en présentant un exemple représentatif d'implémentation. Il évoque à plusieurs reprises d'autres travaux tels que Amoeba, Topaz, System-V, MOS ou encore  Mach, ce qui contribue à l'aspect "état de l'art" de l'article. Cependant l'article est principalement orienté vers la description de Chorus spécifiquement. De plus, le point de vue des auteurs semble être biaisé en faveur du système Chorus qui ne rencontre presque aucune critique négative. On peut donc peut-être questionner l'intégrité scientifique des auteurs dans cet article.
@@ -197,7 +241,6 @@ Les micro-noyaux présentent aussi des avantages en matière de sécurité étan
 Dans sa conclusion, l'article laisse penser que les micro-noyaux deviendraient probablement une partie essentielle des systèmes modernes ce qui est une excellente prédiction étant donné qu'ils sont maintenant utilisés dans plusieurs systèmes d'exploitation grand public.
 
 \clearpage 
-
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
@@ -213,6 +256,18 @@ Ce magnifique projet nous a permis -- outre de nous familiariser avec \LaTeX{} -
 \appendix
 \bigskip\noindent{\Large\bf Annexes}
 \addcontentsline{toc}{section}{Annexes}
-\section{Première Annexe}
+\section{Algorithme qui fait quelque chose}
+\begin{minted}{c}
+#include<stdio.h>
+
+int main()
+{
+	printf("Hello World !\n);
+	return 0;
+}
+\end{minted}
+
+\clearpage 
+\section{Une autre annexe}
 
 \end{document}
