@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.3.9)  4 APR 2021 08:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.3.9)  11 APR 2021 15:00
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
@@ -416,7 +416,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
@@ -441,9 +441,10 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
+runsystem(uname -s > "rapport.w18")...executed.
 
-Package ifplatform Warning: 
-    shell escape is disabled, so I can only detect \ifwindows.
+ (./rapport.w18)
+runsystem(rm -- "rapport.w18")...executed.
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
@@ -468,20 +469,8 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \@float@every@listing=\toks32
 \c@listing=\count317
 )
-runsystem(mkdir -p _minted-rapport)...disabled (restricted).
+runsystem(mkdir -p _minted-rapport)...executed.
 
-
-
-! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18 \usepackage
-                {framed}
-Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for
- more information.
 
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2020/10/09 version 4.42 text color boxes
@@ -894,25 +883,13 @@ tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \arrowsize=\dimen298
 )))
-runsystem(which pygmentize && touch rapport.aex)...disabled (restricted).
+runsystem(which pygmentize && touch rapport.aex)...executed.
 
-
-
-! Package minted Error: You must have `pygmentize' installed to use this packag
-e.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \begin{document}
-                    
-Refer to the installation instructions in the minted documentation for more inf
-ormation.
+runsystem(rm rapport.aex)...executed.
 
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 6.
 
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -1036,7 +1013,7 @@ LaTeX Info: Redefining \nameref on input line 6.
 \@outlinefile=\write8
 \openout8 = `rapport.out'.
 
-<images/insacvl.png, id=57, 475.7775pt x 107.4414pt>
+<images/insacvl.png, id=43, 475.7775pt x 107.4414pt>
 File: images/insacvl.png Graphic file (type png)
 <use images/insacvl.png>
 Package pdftex.def Info: images/insacvl.png  used on input line 21.
@@ -1125,12 +1102,12 @@ been already used, duplicate ignored
                    \relax 
 l.77 \clearpage
                 [1]
-<image2.PNG, id=86, 469.00218pt x 240.9pt>
+<image2.PNG, id=68, 469.00218pt x 240.9pt>
 File: image2.PNG Graphic file (type png)
 <use image2.PNG>
 Package pdftex.def Info: image2.PNG  used on input line 92.
 (pdftex.def)             Requested size: 234.50052pt x 120.44969pt.
-<image3.PNG, id=87, 434.37282pt x 241.65282pt>
+<image3.PNG, id=69, 434.37282pt x 241.65282pt>
 File: image3.PNG Graphic file (type png)
 <use image3.PNG>
 Package pdftex.def Info: image3.PNG  used on input line 99.
@@ -1154,43 +1131,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
  <./image2.PNG>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-04.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-
-LaTeX Warning: Citation `DH76' on page 2 undefined on input line 104.
-
-
-Overfull \hbox (11.94711pt too wide) in paragraph at lines 127--128
-\T1/lmtt/m/n/12 new + directions + in + cryptography & btnG = &oq = New + direc
-tions + in + cryptography$[][] 
- []
-
-
-Overfull \hbox (235.04196pt too wide) in paragraph at lines 128--129
-\T1/lmtt/m/n/12 info : zhumlNGssTEJ : scholar . google . com / &output = citati
-on & scisig = AAGBfm0AAAAAXJH2ZyWHII7hxbyh6hti-[]poxCXmdN6Bc &
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 135.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 135.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 135.
-
-Overfull \hbox (40.33002pt too wide) in paragraph at lines 140--141
-[]\T1/lmr/m/n/12 (-20) Compilation L[]T[]X : \T1/lmtt/m/n/12 pdflatex -synctex=
-1 --shell-escape -interaction=nonstopmode
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1200,15 +1140,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2 <./image3.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+ []
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.35403pt, for example:
@@ -1217,21 +1152,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-3.35403pt}.
 
+[3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
+
+ []
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 126.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 169--171
-
- []
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 172.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 172--174
-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1240,42 +1186,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5
+[5]
+! Misplaced alignment tab character &.
+l.145 ...t que "Michel Gien" c'est un co-founder &
+                                                   CTO of Chorus Systems, il...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+LaTeX Warning: Citation `n1' on page 6 undefined on input line 145.
+
+
+LaTeX Warning: Citation `n2' on page 6 undefined on input line 147.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.35403pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.35403pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.35403pt}.
+
+[6
 
 ]
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.183 \paragraph
-                {}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                Make it at least 15.35403pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.35403pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+(fancyhdr)                \addtolength{\topmargin}{-3.35403pt}.
 
-[6]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[7
-
-]
+[7]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.35403pt, for example:
@@ -1287,57 +1234,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.35403pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.35403pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.35403pt}.
-
-[9
-
-]
 No file rapport.bbl.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.35403pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.35403pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.35403pt}.
-
-[10
-
-
-] (./rapport.aux)
+(./rapport.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 097743F33C3A26A58B749C1D77F70DCA;790.
+(rerunfilecheck)             Checksum: F3E4D773E4F5D8E6E03269E8ACD19074;559.
+runsystem(rm rapport.pyg)...executed.
+
  ) 
 Here is how much of TeX's memory you used:
- 26564 strings out of 479304
- 508506 string characters out of 5869780
- 896556 words of memory out of 5000000
- 43024 multiletter control sequences out of 15000+600000
- 484806 words of font info for 150 fonts, out of 8000000 for 9000
+ 26433 strings out of 479304
+ 506732 string characters out of 5869780
+ 893615 words of memory out of 5000000
+ 42942 multiletter control sequences out of 15000+600000
+ 468532 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  91i,15n,91p,1064b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share
 /texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmbx6.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmtt12.pfb>
-Output written on rapport.pdf (12 pages, 363508 bytes).
+2.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmri12.pfb>
+Output written on rapport.pdf (10 pages, 282866 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 52 named destinations out of 1000 (max. 500000)
- 46212 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 36964 words of extra memory for PDF output out of 42996 (max. 10000000)
 

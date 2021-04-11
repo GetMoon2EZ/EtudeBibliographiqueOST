@@ -101,48 +101,6 @@ Distributed computing est une technologie beaucoup plus large qui existe depuis 
 \end{figure}
 \newline
 
-Voici une première section. Vous pouvez faire des citations en utilisant la commande \textbackslash\texttt{cite}. Par exemple \cite{DH76}.
-
-Les informations de publication concernant le papier cité sont à placer dans un fichier \texttt{.bib}. Dans ce template, il s'agit du fichier \texttt{bibliographie.bib}.
-
-Ces informations peuvent être obtenues sur le web, notamment ici : 
-\begin{center}
-\url{https://scholar.google.fr/}
-\end{center}
-
-
-Pour ce faire :
-\begin{enumerate}
-\item chercher le nom de l'article,
-\item cliquez sur les guillemets,
-\item puis sur BibTeX,
-\item copier l'intégralité du texte dans le fichier \texttt{bibliographie.bib},
-\item modifier la clé,
-\item dans votre fichier \texttt{rapport.tex}, utilisez cette clé pour citer le papier.
-\end{enumerate} 
-
-\underline{Exemple :} New directions in Cryptography, de Diffie et Hellman
-
-\begin{enumerate}
-\item La recherche : \url{https://scholar.google.fr/scholar?hl=fr&as_sdt=0%2C5&q=new+directions+in+cryptography&btnG=&oq=New+directions+in+cryptography}
-\item L'entrée BibTeX : \url{https://scholar.googleusercontent.com/scholar.bib?q=info:zhumlNGssTEJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAXJH2ZyWHII7hxbyh6hti-poxCXmdN6Bc&scisf=4&ct=citation&cd=-1&hl=fr&scfhb=1}
-\item Ici, la clé par défaut est \texttt{diffie1976new}, que je modifie en \texttt{DH76}. 
-\item Pour citer ce papier, dans \texttt{rapport.tex}, j'utilise la commande \textbackslash\texttt{cite}\{\texttt{DH76}\}
-\end{enumerate}
-
-
-
-Vous pouvez aussi mettre des références en URL en pied de page\footnote{Il suffit d'utiliser la commande \textbackslash\texttt{footnote} et d'inclure votre URL à l'aide de \textbackslash\texttt{footnote} : \url{https://www.latex-project.org/} ou de \textbackslash\texttt{href} : \href{https://www.latex-project.org/}{même lien}.} (mais c'est moins propre que \textbackslash\texttt{cite}).
- 
-
-Attention, les compilations \LaTeX et BibTeX peuvent être... ``capricieuses''. Je vous recommande de suivre cet ordre :
-\begin{enumerate}
-\item Compilation \LaTeX{} : \texttt{pdflatex -synctex=1 --shell-escape -interaction=nonstopmode rapport.tex}
-\item Compilation BibTeX : \texttt{bibtex rapport.aux}
-\item Compilation \LaTeX{}
-\item Compilation \LaTeX{}
-\end{enumerate}
-Ou plus simplement, utilisez le \texttt{Makefile} fourni.
 
 \clearpage 
 \section{Problématique}
@@ -151,46 +109,6 @@ Dans les années 1990, tous les systèmes d'exploitation étaient basés sur des
 
 Les développeurs avaient alors besoin d'un système d'exploitation fiable, sécurisé et modulable afin de pouvoir l'exploiter au mieux dans leurs applications. \\
 De plus, un noyau monolithique limite la compatibilité et l'optimisation vis-à-vis d'architectures variées. A l'époque, les ordinateurs hautes performances et les super-ordinateurs possédaient plusieurs processeurs tandis que les ordinateurs grand-public n'en possaidaient qu'un. L'objectif de cette recherche était donc de créer un noyau modulaire qui pouvait être facilement adapté à différentes architectures plus ou moins complexes.
-
-
-\subsection{Une première sous-partie}
-\paragraph{}
-Un premier paragraphe...
-\paragraph{}
-Un second...
-
-\subsection{Une seconde sous-partie}
-\paragraph{Inclusion d'images/screenshot} \textcolor{blue}{$\leftarrow$ on peut donner des titres aux paragraphes :)} 
-
-Dans ce paragraphe, on va inclure une petite image (centrée) :
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=.5]{images/euler.jpg}
-\caption{\label{euler}Avec une légende :)}
-\end{figure}
-
-Et plus loin on peut même faire (et simplement) référence à la Figure \ref{euler} page \pageref{euler}.
-
-Les formules de maths sont entre \$ comme ceci $\exp^{i\pi} + 1 = 0$ ou encore entre \$\$ pour les centrer : $$\sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.$$
-
-On peut également utiliser un environnement dédié :
-
-\begin{equation}
-\label{eq:zsurpz}
-\mathbb{Z}/p\mathbb{Z} = \left\lbrace 0, 1, \ldots, p-1  \right\rbrace
-\end{equation}
-
-Et même aligner les équations simplement et proprement avec un autre environnement :
-
-\begin{eqnarray}
-t &=& a+b+c\\
-&=& d+e \\
-&=& z^{x\times y}\label{eq:ici}\\
-&=& \left(\frac{\delta + \omega}{\tau}\right)
-\end{eqnarray}
-
-Et faire références à ces équations \eqref{eq:zsurpz} et \eqref{eq:ici}.
 
 \clearpage 
 \section{Apports scientifiques principaux de l’article}
@@ -222,10 +140,9 @@ Les sous-systèmes utilisés par Chorus sont en quelques sortes des morceaux de 
 \clearpage 
 \section{Impacts de l'article}
 \paragraph{}
-L’article de recherche est un  ancien article qui est publié en janvier 1991 et Il possède 13 citation sur Google scholar en mars
-2021.
+L’article de recherche est un  ancien article qui est publié en janvier 1991 et il possède 13 citations sur Google scholar en mars 2021.
 \newline 
-Ce qu'il faut savoir a propos de ses auteurs c'est que "Michel Gien" c'est un co-founder & CTO of Chorus Systems , il a dirigé la direction technique du système d'exploitation Chorus, pionnier dans la conception de systèmes d'exploitation basés sur des micro-noyaux et distribué UNIX par "image système unique" sur des architectures multi-ordinateurs ainsi que l'évolution de Chorus vers un système d'exploitation distribué évolutif en temps réel, il a évangélisé l'approche du système d'exploitation Chorus auprès de la communauté scientifique et des marchés commerciaux. il a continué à publier d'autres articles dans le même contexte de notre article par exemple on peut citer \cite{n1}.Ainsi, tout porte à croire que l'article a ouvert la voie à de nombreuses réflexions indépendantes sur le sujet . 
+Ce qu'il faut savoir a propos de ses auteurs c'est que "Michel Gien" c'est un co-founder & CTO of Chorus Systems, il a dirigé la direction technique du système d'exploitation Chorus, pionnier dans la conception de systèmes d'exploitation basés sur des micro-noyaux et distribué UNIX par "image système unique" sur des architectures multi-ordinateurs ainsi que l'évolution de Chorus vers un système d'exploitation distribué évolutif en temps réel, il a évangélisé l'approche du système d'exploitation Chorus auprès de la communauté scientifique et des marchés commerciaux. il a continué à publier d'autres articles dans le même contexte de notre article par exemple on peut citer \cite{n1}.Ainsi, tout porte à croire que l'article a ouvert la voie à de nombreuses réflexions indépendantes sur le sujet . 
 \paragraph{}
 Notre article est très souvent cité comme outil majeur pour faire référence au micrkernel "CHORUS", parmi les articles qu'ils le cite on trouve par exemple \cite{n2} l'article qui parle de la comparaison des 3 microkernels au niveau de la gestion des processus, de la gestion de la mémoire et de la communication et cet article a été cité 23 fois d'où son impact qui est non negligeable.
 
@@ -254,20 +171,4 @@ Ce magnifique projet nous a permis -- outre de nous familiariser avec \LaTeX{} -
 
 \clearpage 
 \appendix
-\bigskip\noindent{\Large\bf Annexes}
-\addcontentsline{toc}{section}{Annexes}
-\section{Algorithme qui fait quelque chose}
-\begin{minted}{c}
-#include<stdio.h>
-
-int main()
-{
-	printf("Hello World !\n);
-	return 0;
-}
-\end{minted}
-
-\clearpage 
-\section{Une autre annexe}
-
 \end{document}
