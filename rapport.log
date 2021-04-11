@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.3.9)  11 APR 2021 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.3.9)  11 APR 2021 15:40
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
@@ -416,7 +416,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
@@ -441,10 +441,9 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-runsystem(uname -s > "rapport.w18")...executed.
 
- (./rapport.w18)
-runsystem(rm -- "rapport.w18")...executed.
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
@@ -469,8 +468,20 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \@float@every@listing=\toks32
 \c@listing=\count317
 )
-runsystem(mkdir -p _minted-rapport)...executed.
+runsystem(mkdir -p _minted-rapport)...disabled (restricted).
 
+
+
+! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \usepackage
+                {framed}
+Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for
+ more information.
 
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2020/10/09 version 4.42 text color boxes
@@ -883,13 +894,25 @@ tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \arrowsize=\dimen298
 )))
-runsystem(which pygmentize && touch rapport.aex)...executed.
+runsystem(which pygmentize && touch rapport.aex)...disabled (restricted).
 
-runsystem(rm rapport.aex)...executed.
+
+
+! Package minted Error: You must have `pygmentize' installed to use this packag
+e.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+Refer to the installation instructions in the minted documentation for more inf
+ormation.
 
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 6.
 
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -1241,14 +1264,12 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: F3E4D773E4F5D8E6E03269E8ACD19074;559.
-runsystem(rm rapport.pyg)...executed.
-
  ) 
 Here is how much of TeX's memory you used:
- 26433 strings out of 479304
- 506732 string characters out of 5869780
- 893615 words of memory out of 5000000
- 42942 multiletter control sequences out of 15000+600000
+ 26428 strings out of 479304
+ 506678 string characters out of 5869780
+ 893553 words of memory out of 5000000
+ 42940 multiletter control sequences out of 15000+600000
  468532 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  91i,15n,91p,1064b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1259,7 +1280,7 @@ ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share
 f/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
 2.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmri12.pfb>
-Output written on rapport.pdf (10 pages, 282866 bytes).
+Output written on rapport.pdf (10 pages, 283567 bytes).
 PDF statistics:
  160 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
